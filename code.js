@@ -10,7 +10,13 @@ function sayHello(input) {
     }
 }
 
-
+function isFive(input){
+   if (typeof input === "boolean"){
+       return "boolean";
+   } else {
+       return false;
+   }
+}
 
 
 

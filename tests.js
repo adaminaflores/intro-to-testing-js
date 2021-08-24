@@ -29,18 +29,39 @@ describe("sayHello", function() {
     it("should return the string 'Hello Pat!' when executed", function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-    it("should return the string when called", function() {
+    it("should return the input string when called", function() {
         expect(sayHello(name)).toBe("Hello, " + name + "!");
     });
-    it("should return the string when called", function() {
+    it("should return the string 'Hello World' when called", function() {
         expect(sayHello("World")).toBe("Hello, World!");
     });
-    it("should return the string when called", function() {
+    it("should return the string 'true' when called", function() {
         expect(sayHello(true)).toBe("Hello, World!");
     });
-    it("should return the string when called", function() {
+    it("should return the string 'false' when called", function() {
         expect(sayHello(false)).toBe("Hello, World!");
     });
 
 });
 
+describe("isFive", function(){
+    it("should be a defined function", function(){
+        expect(typeof isFive).toBe("function");
+    });
+    it("should return the boolean when called", function(){
+       expect(typeof isFive()).toBe("boolean");
+    });
+    it("should return the boolean 'true' when called", function(){
+       expect(isFive(true)).toBe("boolean");
+    });
+    it("should return the boolean 'false' when called", function(){
+        expect(isFive(false)).toBe("boolean");
+    });
+    it("should return the boolean 'string' when called", function(){
+        expect(isFive(" ")).toBe(false);
+    });
+    it("should return the boolean 5 when called", function(){
+        expect(isFive(5)).toBe(false);
+    });
+
+});
