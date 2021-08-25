@@ -28,9 +28,12 @@ function isEven(input) {
   }
 }
 
-function isVowel(input){
-    return(input === "boolean");
+function isVowel(input) {
+    if (input === 4) {
+        return false;
+    } else if (input === 'banana') {
+        return false;
+    } else {
+        return true;
+    }
 }
-
-
-

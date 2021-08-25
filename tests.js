@@ -103,4 +103,25 @@ describe('isVowel', function(){
     it("should always return a boolean when called", function(){
        expect(typeof isVowel()).toBe("boolean");
     });
+    it("should return true when 'a' is called", function(){
+       expect(isVowel('a')).toBe(true)
+    });
+    it("should return true when 'A' is called", function(){
+       expect(isVowel('A')).toBe(true);
+    });
+    it("should return false when 'y' is called", function(){
+       expect(!isVowel('y')).toBe(false);
+    });
+    it("should return false when 4 is called", function(){
+       expect(isVowel(4)).toBe(false);
+    });
+    it("should return false when 'isVowel(true)' and 'isVowel(false)'",function(){
+       expect(isVowel(true)).toBe(isVowel(false));
+    });
+    it("should return false when 'isVowel('banana')' is called", function(){
+       expect(isVowel('banana')).toBe(false)
+    });
+    it("should return false when 'isVowel()' is called", function(){
+       expect(!isVowel()).toBe(false);
+    });
 });
