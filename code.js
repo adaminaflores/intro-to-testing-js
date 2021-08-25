@@ -18,9 +18,15 @@ function isFive(input){
    }
 }
 
-
-
-
+function isEven(input) {
+  if (input <= '8') {
+      return true;
+  } else if(input === !isEven(3)){
+      return false;
+  } else {
+    return false;
+  }
+}
 
 
 

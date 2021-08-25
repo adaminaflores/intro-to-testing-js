@@ -63,5 +63,36 @@ describe("isFive", function(){
     it("should return the boolean 5 when called", function(){
         expect(isFive(5)).toBe(false);
     });
-
+});
+describe("isEven", function(){
+    it("should be a defined function", function(){
+        expect(typeof isEven).toBe("function");
+    });
+    it("should return the boolean when called", function(){
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it("should return true when executed", function(){
+        expect(isEven(2)).toBe(true);
+    });
+    it("should return true when negative is executed", function(){
+       expect(isEven(-4)).toBe(true);
+    });
+    it("should return false when executed", function(){
+        expect(isEven(3)).toBe(isEven(false));
+    });
+    it("should return false when 'banana' is called", function(){
+        expect(isEven('banana')).toBe(false);
+    });
+    it("should return true when '8' is called", function(){
+       expect(isEven('8')).toBe(true);
+    });
+    it("should return false when 'infinity' is called",function(){
+       expect(isEven('infinity')).toBe(false);
+    });
+    it("should return false when called with a boolean input", function(){
+        expect(isEven(true)).toBe(isEven(false));
+    });
+    it("should return false when called without an argument", function(){
+        expect(isEven()).toBe(false);
+    });
 });
